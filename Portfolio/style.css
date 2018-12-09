@@ -1,0 +1,356 @@
+/*universal*/
+
+* {
+    cursor: url('https://image.ibb.co/jhVwRe/green_circle.png'), default;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    margin: 0 0;}
+
+h4 {
+    font-weight: bold;
+    font-size: 70px;
+    width:50vw;
+    text-align: center;
+    margin: 10vh 0 0 0;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: blue;
+    width: 100%;}
+
+h7 {
+    text-align: center;
+    margin: auto auto;
+    font-size: 1rem;
+    color: red;}
+
+
+a[href]:hover{
+    color: black;
+}
+
+
+
+
+
+/*animations*/
+
+@keyframes scale {
+    100% {
+        transform: scaleX(1.2) scaleY(1.2);} }
+
+@keyframes spin {
+    100% {
+        transform:rotate(360deg);} }
+
+
+
+
+/*lines*/
+
+#blueLine{
+    width:100%;
+    padding:10px;
+    background-color: blue;}
+
+#yellowLine{
+    width:100%;
+    padding:10px;
+    background-color: yellow;}
+
+#redLine{
+    width:100%;
+    padding:10px;
+    background-color: red;}
+
+#greenLine{
+    width:100%;
+    padding:10px;
+    background-color: lawngreen;}
+
+
+
+
+/*navigation*/
+
+#ScrollToTop {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;}
+
+.navigation {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    position: fixed;
+    z-index: 2;
+    text-align: center;
+    margin-top: 0;}
+
+#one {
+    background-color: rgba(0, 0, 255, 0.9);}
+
+#two {
+    background-color: rgba(255, 255, 0, 0.9);}
+
+#three {
+    background-color: rgba(0, 255, 0, 0.9);}
+
+#four {
+    background-color: rgba(255, 0, 0, 0.9);}
+
+.item {
+    flex: 1 1 calc(50%);
+    text-decoration: none;
+    color:black;}
+
+.item:nth-child(odd) {
+    flex: 0 0 50%;}
+
+.Arrow {
+    width:10%;
+    animation:scale 1s infinite;
+    z-index: 2;
+    padding-top: 10px;}
+
+.Arrow2 {
+    width:4%;
+    animation:scale 1s infinite;
+    z-index: 2;
+    padding-top: 10px;}
+
+
+
+
+/*top page*/
+
+#topSection {
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+
+
+.star{
+    width:4%;
+    height: 4%;
+    animation:spin 4s infinite;}
+
+img #logo {
+    padding-bottom: 500px;}
+
+#logo{
+    height: 25%;
+    width: 50%;
+    position: relative;}
+
+
+
+
+/*about page*/
+
+#aboutSection{
+    background: white;}
+
+#content{
+    padding-top: 20px;
+    padding-bottom: 150px;
+    display: flex}
+
+#profile-photo{
+    width: 50%;}
+
+#izzyPic{
+    width: 300px;
+    border-radius: 200px;
+    border: 40px solid red;
+    display: inline-block;
+    margin-left:30%}
+
+#about-me{
+    width: 40%;
+    display: inline-block;}
+
+#c1{
+    padding: 20px;
+    margin-right: 20px;
+    background: #FFFF00;
+    text-align: center;}
+
+#c1:hover{
+    background: lawngreen;}
+
+#c2{
+    padding: 20px;
+    margin-right: 20px;
+    background: #FFFF00;
+    text-align: center;}
+
+#c2:hover{
+    background: lawngreen;}
+
+#c3{
+    padding: 20px;
+    margin-right: 20px;
+    background: #FFFF00;
+    text-align: center;}
+
+#c3:hover{
+    background: lawngreen;}
+
+a.skills {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);}
+
+.skills{
+    font-weight: lighter;}
+
+div.circles {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    padding: 20px;
+    border: 20px;
+    border-radius: 50%;
+    display: inline-block;}
+
+div.circles:hover {
+    color: red;}
+
+h8{
+    font-size: 28px;
+    color: blue;
+    width: 100%;
+    text-shadow: 3px 2px red;
+}
+
+
+/*work*/
+
+#workSection {
+    background:white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;}
+
+#MotionCapture {
+    display: block;
+    border:10rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.2rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.grid-container > div {;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    background-color: red;
+}
+.mocapGridElement {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.headings {
+    color: blue;
+    padding-top: 1%;
+}
+
+.descriptions {
+    padding-bottom: 1%;
+}
+
+
+/*contact*/
+
+#contactSection{
+    background:white;
+    padding-bottom:100px;
+}
+
+.contact{
+    width:20%;
+    height:190px;
+    border-radius: 50%;
+    display: inline-block;
+    background: blue;
+    text-align: center;
+    color: white;
+    margin: 20px 20px;
+}
+
+.fav{
+    width: 30%;
+    display: inline-block;
+    color: #ba0000;
+    padding-top: 50px;
+}
+
+#contactCircles {
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;}
+
+.contactlink {
+    color:lawngreen;}
+
+
+
+
+/*blog*/
+
+#blogSection{
+    background:white;
+    padding-bottom:500px;
+}
+
+
+
+
+/*footer*/
+
+footer{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;}
+
+.copyright{
+    width:20%;
+    height:190px;
+    border-radius: 50%;
+    display: inline-block;
+    background: lawngreen;
+    text-align: center;
+    color: black;
+    margin: 20px 20px;}
+
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="navigation.js"></script>
+    <link href='media-player.css' rel='stylesheet' />
+    <link href='photos.css' rel='stylesheet' />
+    <script src='media-player.js'></script>
+    <script src='photos.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+
+<!--navigation-->
+
+<div class="navigation">
+        <a class="item" id="one" href="#aboutSection">About</a>
+        <a class="item" id="two" href="#contactSection">Contact</a>
+        <a class="item" id="three" href="#workSection">Work</a>
+        <a class="item" id="four" href="#blogSection">Blog</a>
+        <a id="ScrollToTop" href="#topSection"><img class="Arrow" src="up.png"/></a>
+</div>
+
+<!--top page / landing page-->
+
+<section id="topSection">
+    <img class="star" src="star.png">
+    <img class="star" src="star.png">
+    <img id="logo" src="logo.png">
+    <a href="#aboutSection"><img class="Arrow2" src="down.png" /></a>
+</section>
+
+<!--about page-->
+
+
+<section id="aboutSection">
+
+    <div id="blueLine"></div>
+    <h4>About</h4>
+
+<section id="content">
+
+    <div id="profile-photo">
+    <img id="izzyPic" src="https://s8.postimg.cc/eh19usa9h/Full_Size_Render.jpg" alt="Picture of Izzy Heron" width="300" height="300"></div>
+
+    <div id="about-me">
+        <h8 id="helloAbout">Hello, my name is IZZY! </h8>
+        <h3>A few of my skills:</h3>
+        <div id="circle-holder">
+            <div id="c1" class="circles">
+                <p>mocap</p><a class="skills" href="#mocapGrid"></a>
+            </div>
+            <div id="c2" class="circles">
+                <p>design</p><a class="skills" href="http://sites.bxmc.poly.edu/~isabellaheron/interactive_installation/"></a>
+            </div>
+            <div id="c3" class="circles">
+                <p>photo</p><a class="skills" href="https://www.linkedin.com/in/isabella---heron/"></a>
+            </div>
+        </div>
+        <p>I am an an experience engineer, interaction designer, and creative technologist, currently pursuing my Undergraduate’s degree from New York University's Integrated Digital Media program.
+           I am passionate, bold, optimistic, and inspired by the unknown. I am a pro at solving problems with creativity while keeping my artistic vision in mind.</p>
+        </div>
+</section>
+
+</section>
+
+<!--work-->
+
+    <section id="workSection">
+
+        <div id="greenLine"></div>
+        <h4>Work</h4>
+
+        <section class="mocapGridElement" id="mocapGrid">
+
+
+        <div class="mocapGridElement1" id="MotionCapture">
+            <h1>Selected Motion Capture Projects</h1>
+            <div class="grid-container">
+                <div class="item1">
+                    <p class="headings">Project:</p>
+                    <p>Elsewhere In The Woods</p>
+                    <p class="headings">Role:</p>
+                    <p>Motion Capture Technician/Fabrication Lead</p>
+                    <p class="headings">Description:</p>
+                    <p>Live-action motion capture, installation in</p>
+                    <p>miniatures that invites the audience to watch and</p>
+                    <p class="descriptions">interact with a world much smaller than our own.</p>
+                </div>
+                <div class="item2">
+                    <p class="headings">Project:</p>
+                    <p class="descriptions">sylphideAR by Alex Fast</p>
+                    <p class="headings">Role:</p>
+                    <p class="descriptions">Motion Capture Technician/Dance Director</p>
+                    <p class="headings">Description:</p>
+                    <p>AR application that allows you to watch a Dancer</p>
+                    <p class="descriptions">explore and dance around and surface!</p>
+
+
+                </div>
+
+                <div class="item3">
+
+                    <p class="headings">Project:</p>
+                    <p class="descriptions">Genealogy of a Rhythm by Marco Guarino</p>
+                    <p class="headings">Role:</p>
+                    <p class="descriptions">Motion Capture Technician/Data Cleaner</p>
+                    <p class="headings">Description:</p>
+                    <p>Uruguayan Candombe Drummers were captured to analyze</p>
+                    <p class="descriptions">, archive, and explore their unique movements</p>
+                </div>
+            </div>
+        </div>
+
+        <!--media player-->
+
+        <div class="mocapGridElement2" id='media-player'>
+            <video id='media-video' controls>
+                <source src='1.mp4' type='video/mp4'>
+            </video>
+
+            <div id='media-controls'>
+                <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>
+                <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button>
+                <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
+                <button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'>Increase volume</button>
+                <button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'>Decrease volume</button>
+                <button id='mute-button' class='mute' title='mute' onclick='toggleMute("true");'>Mute</button>
+            </div>
+
+            <div id='media-play-list'>
+                <p id="red">Videos</p>
+                <ul id='play-list'>
+                    <li><span class='play-item' onclick='loadVideo("1.mp4");'>Elsewhere</span></li>
+                    <li><span class='play-item' onclick='loadVideo("2.mp4");'>sylphideAR</span></li>
+                    <li><span class='play-item' onclick='loadVideo("3.mp4");'>Candombe</span></li>
+                </ul>
+            </div>
+        </div>
+        </section>
+
+        <h1>Design</h1>
+        <h1>Photography</h1>
+
+
+        <h7 onclick="toggle_div_fun('sectionToHide');">Click here to view a few of my photos.</h7>
+
+        <div class="yo" id="sectionToHide">
+            <ul class="gallery" >
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+                <li class="photos"></li>
+
+            </ul>
+        </div>
+
+        <a id="resume" href="2018IsabellaHeronResume!.pdf" download>Click here to download my copy of my resume!</a>
+
+    </section>
+
+
+<!--contact-->
+
+    <section id="contactSection">
+
+        <div id="yellowLine"></div>
+        <div class="title">
+            <h4>Contact</h4>
+        </div>
+
+        <h1>Get in touch!</h1>
+        <h1>I love meeting and collaborating with new people!</h1>
+
+        <section id="contactCircles">
+        <div id="f1" class="contact">
+            <div class="fav"><i class="fas fa-phone fa-2x"></i></div>
+            <div class="text"><span>Call</span><br><span>(201)300-7111</span></div>
+        </div>
+
+        <div id="f2" class="contact">
+            <div class="fav"><i class="far fa-envelope fa-2x"></i></div> <br>
+            <div class="text"><a class="contactlink" href="mailto:ih640@nyu.edu?Subject=Hello%20again" target="_top">Send Mail</a>
+                <br><span>ih640@nyu.edu</span></div>
+        </div>
+
+        <div id="f3" class="contact">
+            <div class="fav"><i class="fab fa-instagram fa-2x"></i></div>
+            <div class="text"><a class="contactlink" href="https://www.instagram.com/sephora20/">Follow</a><br><span>@sephora20</span></div>
+        </div>
+
+        </section>
+
+    </section>
+
+
+<!--blog-->
+
+
+
+    <section id="blogSection">
+
+        <div id="redLine">
+        </div>
+
+        <div class="title">
+            <h4>Blog</h4>
+        </div>
+
+
+
+        <p>filler</p>
+    </section>
+
+<footer>
+<div id="f4" class="copyright">
+<div class="fav"><i class="far fa-copyright fa-2x"></i></div>
+<div class="text"><span>Copyright</span><br><span>© 2018 by Izzy Heron</span></div>
+</div>
+</footer>
+
+
+
+
+</body>
+</html>

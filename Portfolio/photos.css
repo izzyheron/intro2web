@@ -1,0 +1,89 @@
+.yo {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery {
+    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(20vh, 200px);
+}
+.gallery li.photos {
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    height: 20vh;
+    width: 20rem;
+    min-width: 15rem;
+}
+@supports (display: grid) {
+    .gallery li.photos {
+        height: initial;
+        margin: unset;
+        width: initial;
+        min-width: initial;
+    }
+    .gallery li.photos:nth-of-type(2n + 2) {
+        grid-row: span 2;
+    }
+}
+
+
+li.photos:nth-of-type(1) {
+    background-image: url(//s3.us-east-2.amazonaws.com/portfolio-izzyheron/1.jpg);}
+
+li.photos:nth-of-type(2) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/25401462934_41eb6f41b5_o.jpeg);}
+
+li.photos:nth-of-type(3) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/25939596711_547f1c613e_o.jpeg);}
+
+li.photos:nth-of-type(4) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28445741380_a84c9be182_o.jpeg);}
+
+li.photos:nth-of-type(5) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28445740240_98b0416f88_o.jpeg);}
+
+li.photos:nth-of-type(6) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28624691402_87c6b4f5bc_o.jpeg);}
+
+li.photos:nth-of-type(7) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28652741211_7dfb749c68_o.jpeg);}
+
+li.photos:nth-of-type(8) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28652741691_e514959d56_o.jpeg);}
+
+li.photos:nth-of-type(9) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28652744161_1d9dfb3822_o.jpeg);}
+
+li.photos:nth-of-type(10) {
+    background-image: url(https://s3.us-east-2.amazonaws.com/portfolio-izzyheron/28729936135_73f4565ab6_o.jpeg);}
+
+
+
+
+ul, li.photos {
+    list-style: none;
+    padding-left: 0;}
+
+li.photos {
+    align-items: stretch;
+    background: no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 2;
+    overflow: hidden;}
+
+h1.section{
+    font-size: calc(3rem + 1vw);
+    font-weight: 300;
+    margin: 2rem 0 0;
+    text-align: center;}
+
+.intro {
+    text-align: center;}
